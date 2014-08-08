@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page import="com.wc.bean.WcUser" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -24,5 +25,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     This is my JSP page. <br>
+    <%  
+// retrieve your list from the request, with casting 
+List<WcUser> list = (List<WcUser>) request.getAttribute("users");
+
+out.println(list.size());
+// print the information about every category of the list
+for(WcUser user : list) {
+    out.println(user.getUserId());
+    out.println(user.getUserName());
+    //out.println(());
+}
+%>
   </body>
 </html>

@@ -9,16 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.wc.bean.OfUser;
 import com.wc.bean.WcFile;
 import com.wc.bean.WcUser;
 import com.wc.dao.OfUserDAO;
 import com.wc.dao.WcUserDAO;
+import com.wc.tools.Blowfish;
 
 @WebServlet(name = "AdminServlet", urlPatterns=("/addUser.do"))
 public class AddUser extends HttpServlet {
 
 	private WcUserDAO uDao = new WcUserDAO();
 	private OfUserDAO ofDAO=new OfUserDAO();
+	private static Blowfish _blow = new Blowfish("weChat4.0");
+	private static Blowfish _of = new Blowfish("4H709fjyRIPOVvK");
 	/**
 	 * Constructor of the object.
 	 */
@@ -88,12 +92,13 @@ public class AddUser extends HttpServlet {
 //		out.println("</HTML>");
 //		out.flush();
 //		out.close();
-		String moible = request.getParameter("mobile");
+		String mobile = request.getParameter("mobile");
 		String password = request.getParameter("password");
 		String nickName = request.getParameter("nickname");
+		String description = request.getParameter("description");
 		if (uDao.findByUserName(mobile).size() != 0) {
 			// 注册失败，用户名已存在
-			
+			response.sendRedirect("error.jsp");
 		}
 		
 //		if (uDao.findByUserName(nickName).size() != 0) {
@@ -104,16 +109,16 @@ public class AddUser extends HttpServlet {
 //		}
 		
 		
-		WcFile file=fileDao.findById(userHead);
+//		WcFile file=fileDao.findById(userHead);
 		
 		WcUser user = new WcUser();
 		user.setUserName(mobile);
-		user.setUserPassword(uPass);
+		user.setUserPassword(password);
 		user.setUserDescription(description);
 		user.setUserNickname(nickName);
-		if(file!=null)
-		user.setUserHead(file);
-		user.setApiKey(_blow.encryptString(mobile + uPass
+//		if(file!=null)
+//		user.setUserHead(file);
+		user.setApiKey(_blow.encryptString(mobile + password
 				+ System.currentTimeMillis()));
 		uDao.save(user);
 				
@@ -122,6 +127,22 @@ public class AddUser extends HttpServlet {
 		response.sendRedirect("listUser.jsp");
 	}
 
+
+	/*
+	 * 注册openFire
+	 * 
+	 * */
+	private boolean registerOpenFireUser(WcUser user) {
+		// TODO Auto-generated method stub
+		String encodedStr=_of.encryptString(user.getUserPassword());
+		OfUser openFireUser=new OfUser(user.getUserId(), user.getUserPassword(), encodedStr, "", "", String.format("00%d", System.currentTimeMillis()), String.format("00%d", System.currentTimeMillis()));
+			
+		ofDAO.save(openFireUser);
+			
+		return true;
+		
+		
+	}
 	/**
 	 * Initialization of the servlet. <br>
 	 *
