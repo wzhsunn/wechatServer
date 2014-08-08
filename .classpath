@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_6.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.jstl_1.2.1">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jst.web.jstl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.hibernate_4.1">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jpt.jpa"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.jaxrs_jersey_1.1">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jst.jaxrs"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/FastInfoset-1.2.2.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/hibernate-core-4.1.4.Final.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/hibernate-entitymanager-4.1.4.Final.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jackson-core-asl-1.5.5.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jackson-jaxrs-1.5.5.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jackson-mapper-asl-1.5.5.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/javax.servlet.jsp.jstl.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jdom-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jersey-atom-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jersey-client-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jersey-core-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jersey-fastinfoset-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jersey-json-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jersey-multipart-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jersey-server-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jspsmartupload.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/jstl-impl.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/mail-1.4.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/mimepull-1.3.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/mysql-connector-java-5.1.25-bin.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/pinyin4j-2.5.0.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/rome-0.9.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/jar包/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/code7/im/wechat4server-master/lib/servlet-api.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>
